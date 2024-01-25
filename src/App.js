@@ -12,7 +12,7 @@ function App() {
 
 
   const accessIdeas = async() => {
-    const response = await fetch('http://www.boredapi.com/api/activity/ ');
+    const response = await fetch('http://www.boredapi.com/api/activity/');
     const data = await response.json();
     setIdea(data.activity)
   }
