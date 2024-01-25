@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import mainPicture from './surrounded.jpg'
 
 function App() {
+
+  const [idea, setIdea] = useState('');
+
+  useEffect(()=> {
+    accessIdeas();
+  }, [])
+
+
+  const accessIdeas = async() => {
+    const response = await fetch('http://www.boredapi.com/api/activity/ ');
+    const data = await response.json();
+    setIdea(data.activity)
+  }
+
+  const handleMouseOver = () => {
+    accessIdeas();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h2>Boredom Buster</h2>
+      <h2 onMouseOver={handleMouseOver}>{idea}</h2>
+      <img src={mainPicture} alt="" />
+    </main>
   );
 }
 
