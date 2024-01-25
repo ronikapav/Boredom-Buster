@@ -5,9 +5,9 @@
 <h3 align="center">Это веб-приложение, которое предлагает идеи о том, чем можно занять себя, чтобы избавиться от скуки. Приложение использует API для загрузки идей по развлечениям.</h3>
 <h2>Установка</h2>
 <p>1. Склонируйте репозиторий на свой компьютер:</p>
-<pre><code>git clone https://github.com/ronikapav/to-do-list-app.git</code></pre>
+<pre><code>git clone https://github.com/ronikapav/Boredom-Buster.git</code></pre>
 <p>2. Перейдите в папку с проектом:</p>
-<pre><code>cd to-do-list-app</code></pre>
+<pre><code>cd Boredom-Buster</code></pre>
 <p>3. Установите необходимые зависимости:</p>
 <pre><code>npm install</code></pre>
 <p>4. Запустите проект:</p>
